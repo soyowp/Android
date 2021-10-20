@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <CheckBox
+        android:id="@+id/appviewch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="앱 보이기 버튼"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="5dp"
+        android:text="보고싶은 이미지?"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/appviewch" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="101dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="36dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/dogeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="도지코인"
+            app:layout_constraintTop_toTopOf="@+id/radioGroup"
+            tools:layout_editor_absoluteX="-79dp" />
+        <!--아까전에는 RadioButton들에는 위치값이 배정이 안되어서
+        보이기를 해도 막상 보여질 좌표값이 업성서 안보였던듯합니다.-->
+
+        <RadioButton
+            android:id="@+id/bitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비트코인"
+            app:layout_constraintTop_toBottomOf="@+id/dogeBtn"
+            tools:layout_editor_absoluteX="-16dp" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="선택완료"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageView
+        android:id="@+id/dodge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="76dp"
+        android:src="@drawable/download"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <ImageView
+        android:id="@+id/btc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/unnamed"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/dodge"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
